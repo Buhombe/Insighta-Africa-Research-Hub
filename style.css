@@ -199,7 +199,7 @@ h2{
   object-fit:cover;
 }
 
-/* SERVICES / TEAM / CARDS */
+/* CARDS */
 .grid{
   display:flex;
   flex-wrap:wrap;
@@ -213,9 +213,8 @@ h2{
   padding:12px 15px;
   text-align:center;
   box-shadow:0 8px 20px rgba(0,0,0,0.05);
-  flex:1 1 250px; /* fixed width for all cards */
-  max-width:250px; 
-  height:auto; /* height adjusts to content */
+  flex:0 0 250px;  /* fixed width */
+  height:auto;      /* height dynamic based on content */
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
@@ -239,7 +238,6 @@ h2{
   font-size:0.9rem;
   color:#666;
   margin-bottom:8px;
-  flex-grow:0; /* prevents stretching */
 }
 
 .profile-button{
@@ -259,17 +257,9 @@ h2{
   box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* PRICING */
-#pricing{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  list-style:none;
-  padding:0;
-}
-
+/* PRICING CARDS */
 #pricing .card{
-  flex:1 1 250px; /* same width as other cards */
+  flex:0 0 250px; /* same width as other cards */
   max-width:250px;
   margin:0 auto;
   height:auto;
@@ -285,12 +275,6 @@ h2{
   padding:30px 15px;
   gap:15px;
   text-align:center;
-}
-
-.QRcode{
-  width:120px;
-  height:120px;
-  border-radius:15px;
 }
 
 /* BUTTONS */
@@ -321,20 +305,6 @@ footer{
 
 /* MOBILE RESPONSIVE */
 @media(max-width:768px){
-  .hero-content h1{
-    font-size:2rem;
-    margin-bottom:12px;
-  }
-  .hero-content p{
-    font-size:1rem;
-    margin-bottom:12px;
-  }
-
-  .about-grid{
-    flex-direction:column;
-    gap:15px;
-  }
-
   .grid{
     flex-direction:column;
     gap:10px;
@@ -342,15 +312,13 @@ footer{
   }
 
   .card{
-    flex:1 1 90%; /* width 90% of screen */
-    max-width:90%;
+    flex:0 0 95%; /* almost full width on mobile */
+    max-width:95%;
   }
 
   .btn-primary, .btn-secondary, .profile-button{
-    width:90%;
-    text-align:center;
+    width:95%;
     margin:8px auto;
-    padding:10px 0;
   }
 
   #contact{
@@ -359,42 +327,9 @@ footer{
     gap:10px;
   }
 
-  .QRcode{
-    width:100px;
-    height:100px;
-    margin-bottom:10px;
-  }
-
   #pricing{
     flex-direction:column;
     gap:10px;
     padding:0 5px;
-  }
-
-  .nav-links li a{
-    font-size:1.1rem;
-    margin-bottom:5px;
-  }
-
-  .hamburger span{
-    width:28px;
-    height:3px;
-  }
-}
-
-/* SMALL DEVICES */
-@media(max-width:480px){
-  .hero-content h1{
-    font-size:1.5rem;
-  }
-  .hero-content p{
-    font-size:0.9rem;
-  }
-  .card{
-    padding:8px 10px;
-  }
-  .profile-button, .btn-primary, .btn-secondary{
-    padding:10px 20px;
-    font-size:0.85rem;
   }
 }
