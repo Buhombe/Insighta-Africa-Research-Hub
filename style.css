@@ -213,8 +213,8 @@ h2{
   padding:12px 15px;
   text-align:center;
   box-shadow:0 8px 20px rgba(0,0,0,0.05);
-  flex:0 0 250px;  /* fixed width */
-  height:auto;      /* height dynamic based on content */
+  flex:0 0 250px;      /* fixed width */
+  min-height:0;         /* let content decide height */
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
@@ -259,7 +259,7 @@ h2{
 
 /* PRICING CARDS */
 #pricing .card{
-  flex:0 0 250px; /* same width as other cards */
+  flex:0 0 250px; 
   max-width:250px;
   margin:0 auto;
   height:auto;
@@ -312,13 +312,14 @@ footer{
   }
 
   .card{
-    flex:0 0 95%; /* almost full width on mobile */
-    max-width:95%;
+    flex:0 0 100%;   /* take full width */
+    max-width:100%;
+    padding:10px;    /* less padding for mobile */
   }
 
   .btn-primary, .btn-secondary, .profile-button{
-    width:95%;
-    margin:8px auto;
+    width:100%;
+    margin:5px auto;
   }
 
   #contact{
