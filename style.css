@@ -213,22 +213,17 @@ h2{
   padding:12px 15px;
   text-align:center;
   box-shadow:0 8px 20px rgba(0,0,0,0.05);
-  flex:1 1 250px; /* width same for all cards */
+  flex:1 1 250px; /* fixed width for all cards */
   max-width:280px;
-  height:auto; /* auto height depending on content */
+  height:auto; /* height auto based on content */
   display:flex;
   flex-direction:column;
-  justify-content:flex-start; /* adjust height to content */
+  justify-content:flex-start; /* adjusts height to content */
   transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.1);
-}
-
 .card h3{
-  margin-bottom:6px;
+  margin:8px 0 5px 0;
   font-size:1rem;
   color:#ff7f50;
 }
@@ -244,13 +239,14 @@ h2{
 .card p{
   font-size:0.9rem;
   color:#666;
-  margin-bottom:5px;
+  margin-bottom:8px;
+  flex-grow:0; /* prevents extra stretching */
 }
 
 .profile-button{
   display:block;
-  margin:8px auto 0;
-  padding:8px 20px;
+  margin:6px auto 0;
+  padding:8px 18px;
   border-radius:40px;
   background: linear-gradient(to right, #22c1c3, #fdbb2d);
   color:#fff;
@@ -326,7 +322,6 @@ footer{
 
 /* MOBILE RESPONSIVE */
 @media(max-width:768px){
-
   .hero-content h1{
     font-size:2rem;
     margin-bottom:12px;
