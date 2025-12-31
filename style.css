@@ -210,12 +210,15 @@ h2{
 .card{
   background:#fff;
   border-radius:15px;
-  padding:10px 15px;
+  padding:12px 15px;
   text-align:center;
   box-shadow:0 8px 20px rgba(0,0,0,0.05);
-  flex:1 1 250px;
+  flex:1 1 250px; /* width same for all cards */
   max-width:280px;
-  height:auto;
+  height:auto; /* auto height depending on content */
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start; /* adjust height to content */
   transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -225,7 +228,7 @@ h2{
 }
 
 .card h3{
-  margin-bottom:8px;
+  margin-bottom:6px;
   font-size:1rem;
   color:#ff7f50;
 }
@@ -266,7 +269,7 @@ h2{
 #pricing{
   display:flex;
   justify-content:center;
-  gap:10px;
+  gap:15px;
   list-style:none;
   padding:0;
 }
