@@ -7,7 +7,7 @@
 
 body{
   font-family:'Poppins',sans-serif;
-  background: url('images/background.jpg') no-repeat center center/cover;;
+  background: url('images/background.jpg') no-repeat center center/cover;
   color:#222;
   line-height:1.6;
 }
@@ -72,18 +72,17 @@ body{
   border-radius:2px;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE NAV */
 @media(max-width:768px){
   .nav-links{
     position:fixed;
     top:65px;
     right:-100%;
-    width:200px;
+    width:220px;
     height:100vh;
     background:#fff;
     flex-direction:column;
     align-items:center;
-    justify-content:flex-start;
     padding-top:30px;
     gap:20px;
     transition:0.3s ease;
@@ -109,12 +108,12 @@ body{
 /* HERO */
 .hero{
   position:relative;
-  height:25vh; /* reduced from 90vh */
-  background:url('https://via.placeholder.com/1400x900') center/cover no-repeat;
+  height:60vh;
   display:flex;
   align-items:center;
   justify-content:center;
   color:#fff;
+  background:url('https://via.placeholder.com/1400x900') center/cover no-repeat;
 }
 
 .hero-overlay{
@@ -128,11 +127,11 @@ body{
 
 .hero-content{
   text-align:center;
-  padding: 0 10px;
+  padding:0 15px;
 }
 
 .hero-content h1{
-  font-size:2rem;
+  font-size:2.5rem;
   font-weight:700;
   margin-bottom:15px;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
@@ -146,7 +145,6 @@ body{
 .btn-primary{
   display:inline-block;
   padding:14px 40px;
-  margin: 45px;
   border-radius:50px;
   background: linear-gradient(135deg, #f5c77a, #ff9f43);
   color:#000;
@@ -158,7 +156,6 @@ body{
 .btn-primary:hover{
   transform:translateY(-3px);
   box-shadow:0 15px 35px rgba(245,199,122,0.35);
-  cursor: pointer;
 }
 
 /* SECTIONS */
@@ -176,17 +173,24 @@ h2{
 
 /* ABOUT */
 .about-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  display:flex;
+  flex-wrap:wrap;
   gap:40px;
   align-items:center;
 }
 
+.about-text{
+  flex:1 1 350px;
+}
+
 .about-text p{
-  font-size:22px;
+  font-size:1rem;
   color:#444;
   text-align: justify;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.about-image{
+  flex:1 1 350px;
 }
 
 .about-image img{
@@ -195,25 +199,23 @@ h2{
   object-fit:cover;
 }
 
-/* SERVICES & TEAM */
+/* SERVICES / TEAM / CARDS */
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  display:flex;
+  flex-wrap:wrap;
   gap:30px;
+  justify-content:center;
 }
 
 .card{
   background:#fff;
   border-radius:20px;
-  padding:35px 25px;
+  padding:25px;
   text-align:center;
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
-
-#pricing {
-  text-align: left;
-  list-style-type: none;
+  flex:1 1 260px;
+  max-width:300px;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover{
@@ -235,56 +237,66 @@ h2{
 }
 
 .card p{
-  font-size:22px;
+  font-size:1rem;
   color:#666;
 }
 
-.profile-button {
-  display:inline-block;
-  margin-top:6px;
-  padding:8px 12px;
+.profile-button{
+  display:block;
+  margin:10px auto 0;
+  padding:10px 20px;
   border-radius:40px;
-  background: radial-gradient(black, green, white);
-  color:#e9e6e6;
+  background: linear-gradient(to right, #22c1c3, #fdbb2d);
+  color:#fff;
   font-weight:600;
-  text-decoration:rgb(247, 237, 229);
+  text-decoration:none;
   transition:0.3s;
+  text-align:center;
 }
 
-.profile-button :hover {
-  cursor: pointer;
+.profile-button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* PRICING */
+#pricing{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  list-style:none;
+  padding:0;
 }
 
 /* CONTACT */
 #contact{
   background:#fef6f3;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-around;
+  padding:40px 20px;
+  gap:20px;
   text-align:center;
-  border-top:1px solid #eee;
-  display: flex;
-  padding-right: 250px;
 }
 
-.QRcode {
-  border-radius: 22px;
-  height: 200px;
-  text-align: left;
+.QRcode{
+  width:150px;
+  height:150px;
+  border-radius:20px;
 }
 
-#contact p{
-  margin-bottom:10px;
-  color:#444;
-}
-
+/* BUTTONS */
 .btn-secondary{
   display:inline-block;
-  margin-top:20px;
   padding:14px 40px;
   border-radius:50px;
   background: linear-gradient(135deg, #f5c77a, #ff9f43);
   color:#000;
   font-weight:600;
   text-decoration:none;
-  transition:0.3s;
+  transition:0.3s ease;
 }
 
 .btn-secondary:hover{
@@ -301,18 +313,53 @@ footer{
   border-top:1px solid #eee;
 }
 
-/* RESPONSIVE */
+/* MOBILE RESPONSIVE */
 @media(max-width:768px){
+
+  /* Hero text smaller */
   .hero-content h1{
     font-size:2rem;
   }
-
   .hero-content p{
     font-size:1rem;
   }
 
+  /* About stacked */
   .about-grid{
-    grid-template-columns:1fr;
+    flex-direction:column;
     gap:25px;
   }
+
+  /* Cards stacked */
+  .grid{
+    flex-direction:column;
+    gap:20px;
+    align-items:center;
+  }
+
+  /* Buttons full width */
+  .btn-primary, .btn-secondary, .profile-button{
+    width:90%;
+    text-align:center;
+    margin:10px auto;
+  }
+
+  /* Contact stacked */
+  #contact{
+    flex-direction:column;
+    padding:20px;
+  }
+
+  .QRcode{
+    width:120px;
+    height:120px;
+    margin-bottom:20px;
+  }
+
+  #pricing{
+    flex-direction:column;
+    gap:20px;
+    padding:0 10px;
+  }
+
 }
