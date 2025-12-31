@@ -1,185 +1,274 @@
-/* ===================== RESET ===================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  background: #f7f7f7;
-  color: #222;
-  line-height: 1.6;
+body{
+  font-family:'Poppins',sans-serif;
+  background: url('images/background.jpg') no-repeat center center/cover;
+  color:#222;
+  line-height:1.6;
 }
 
-/* ===================== GLOBAL ===================== */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background: rgba(255,255,255,0.95);
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  z-index:1000;
 }
 
-section {
-  padding: 40px 0;
+.nav-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:1200px;
+  margin:auto;
+  padding:15px 20px;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #ff7f50;
+.navbar .logo{
+  font-weight:700;
+  font-size:1.5rem;
+  color:#ff7f50;
+  text-decoration:none;
 }
 
-/* ===================== NAV / HEADER ===================== */
-header {
-  background: #111;
-  color: #fff;
-  padding: 15px 0;
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:25px;
 }
 
-header h1 {
-  text-align: center;
-  font-size: 1.4rem;
+.nav-links li a{
+  text-decoration:none;
+  color:#222;
+  font-weight:500;
+  transition:0.3s;
 }
 
-/* ===================== GRID SYSTEM ===================== */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.nav-links li a:hover{
+  color:#ff7f50;
 }
 
-/* ===================== CARD (GENERAL) ===================== */
-.card {
-  background: #fff;
-  border-radius: 15px;
-  padding: 12px 15px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-
-  width: 260px;       /* SAME WIDTH ALL CARDS (DESKTOP) */
-  height: auto;       /* HEIGHT FIT CONTENT */
-
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+/* HAMBURGER */
+.hamburger{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+  gap:5px;
 }
 
-/* ===================== CARD CONTENT ===================== */
-.card img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  margin: 5px auto;
-  object-fit: cover;
+.hamburger span{
+  display:block;
+  width:25px;
+  height:3px;
+  background:#222;
+  border-radius:2px;
 }
 
-.card h3 {
-  font-size: 1rem;
-  margin: 6px 0 4px;
-  color: #ff7f50;
-}
-
-.card p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-
-/* ===================== BUTTON ===================== */
-.card a,
-.profile-button {
-  margin-top: 8px;
-  padding: 8px 18px;
-  border-radius: 30px;
-  background: linear-gradient(to right, #22c1c3, #fdbb2d);
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.85rem;
-}
-
-/* ===================== PRICING SPECIAL ===================== */
-.pricing-card {
-  border: 2px solid #ff7f50;
-}
-
-/* ===================== FORMS ===================== */
-form {
-  max-width: 500px;
-  margin: auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 15px;
-}
-
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 25px;
-  background: #ff7f50;
-  color: #fff;
-  font-size: 1rem;
-}
-
-/* ===================== FOOTER ===================== */
-footer {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 0.85rem;
-}
-
-/* ===================== MOBILE FIX (KEY PART) ===================== */
-@media (max-width: 768px) {
-
-  section {
-    padding: 25px 0;
+/* MOBILE NAV */
+@media(max-width:768px){
+  .nav-links{
+    position:fixed;
+    top:65px;
+    right:-100%;
+    width:220px;
+    height:100vh;
+    background:#fff;
+    flex-direction:column;
+    align-items:center;
+    padding-top:30px;
+    gap:20px;
+    transition:0.3s ease;
+    box-shadow: -2px 0 15px rgba(0,0,0,0.1);
   }
 
-  .grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+  .nav-links.active{
+    right:0;
   }
 
-  .card {
-    width: 95%;        /* 🔥 EXACT FIX YOU ASKED */
-    max-width: 95%;
-    margin: 0 auto;
-    padding: 10px 12px;
+  .hamburger{
+    display:flex;
+  }
+}
+
+/* CONTAINER */
+.container{
+  max-width:1200px;
+  width:90%;
+  margin:auto;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:60vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  background:url('https://via.placeholder.com/1400x900') center/cover no-repeat;
+}
+
+.hero-overlay{
+  background: rgba(0,0,0,0.4);
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-content{
+  text-align:center;
+  padding:0 15px;
+}
+
+.hero-content h1{
+  font-size:2.5rem;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.hero-content p{
+  font-size:1.2rem;
+  margin-bottom:20px;
+}
+
+/* SECTIONS */
+section{
+  padding:80px 0;
+}
+
+/* HEADINGS */
+h2{
+  text-align:center;
+  font-size:2.5rem;
+  margin-bottom:40px;
+  color:#ff7f50;
+}
+
+/* ABOUT */
+.about-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:40px;
+  align-items:center;
+}
+
+/* ================= CARDS (DESKTOP SAME) ================= */
+.grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  justify-content:center;
+}
+
+.card{
+  background:#fff;
+  border-radius:20px;
+  padding:20px 18px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
+  flex: 0 0 280px;   /* SAME WIDTH */
+  height:auto;      /* HEIGHT FIT CONTENT */
+}
+
+.card img{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  margin-bottom:10px;
+  object-fit:cover;
+}
+
+.card h3{
+  margin-bottom:6px;
+  color:#ff7f50;
+}
+
+.card p{
+  font-size:0.95rem;
+  color:#666;
+  margin:0; /* IMPORTANT */
+}
+
+/* PRICING */
+#pricing{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  list-style:none;
+  padding:0;
+}
+
+/* CONTACT */
+#contact{
+  background:#fef6f3;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-around;
+  padding:40px 20px;
+  gap:20px;
+  text-align:center;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px 0;
+  font-size:0.9rem;
+  color:#666;
+  border-top:1px solid #eee;
+}
+
+/* ================= MOBILE FIX (MAIN SOLUTION) ================= */
+@media(max-width:768px){
+
+  section{
+    padding:35px 0;
   }
 
-  .card img {
-    width: 80px;
-    height: 80px;
+  h2{
+    font-size:1.8rem;
+    margin-bottom:25px;
   }
 
-  .card h3 {
-    font-size: 0.95rem;
+  .grid{
+    flex-direction:column;
+    gap:15px;
+    align-items:center;
   }
 
-  .card p {
-    font-size: 0.85rem;
+  .card{
+    width:95%;          /* 🔥 FIX */
+    max-width:95%;
+    margin:0 auto;
+    padding:12px 14px;  /* NO EXTRA SPACE */
+    height:auto;        /* CONTENT ONLY */
   }
 
-  .card a,
-  .profile-button {
-    width: 100%;
-    padding: 8px 0;
+  .card img{
+    width:85px;
+    height:85px;
+    margin-bottom:8px;
   }
 
-  header h1 {
-    font-size: 1.2rem;
+  .card p{
+    font-size:0.9rem;
+  }
+
+  #pricing{
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
   }
 }
