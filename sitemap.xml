@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home page -->
+  <url>
+    <loc>https://buhombe.github.io/Insighta-Africa-Research-Hub/</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About page -->
+  <url>
+    <loc>https://buhombe.github.io/Insighta-Africa-Research-Hub/about.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Works page -->
+  <url>
+    <loc>https://buhombe.github.io/Insighta-Africa-Research-Hub/works.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Application form page -->
+  <url>
+    <loc>https://buhombe.github.io/Insighta-Africa-Research-Hub/form.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Testimony page -->
+  <url>
+    <loc>https://buhombe.github.io/Insighta-Africa-Research-Hub/testmony.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Milton page -->
+  <url>
+    <loc>https://buhombe.github.io/Insighta-Africa-Research-Hub/milton.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Edgar page -->
+  <url>
+    <loc>https://buhombe.github.io/Insighta-Africa-Research-Hub/edgar.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Pendaely page -->
+  <url>
+    <loc>https://buhombe.github.io/Insighta-Africa-Research-Hub/pendaely.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Thank You page -->
+  <url>
+    <loc>https://buhombe.github.io/Insighta-Africa-Research-Hub/thankyou.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
