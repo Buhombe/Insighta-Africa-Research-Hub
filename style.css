@@ -362,4 +362,31 @@ footer{
     padding:0 10px;
   }
 
+  /* Navbar links bigger and spaced */
+  .nav-links li a{
+    font-size:1.2rem;
+  }
+
+  /* Hamburger bigger for touch */
+  .hamburger span{
+    width:30px;
+    height:4px;
+  }
+}
+
+/* Additional small device tweaks */
+@media(max-width:480px){
+  .hero-content h1{
+    font-size:1.5rem;
+  }
+  .hero-content p{
+    font-size:0.9rem;
+  }
+  .card{
+    padding:20px;
+  }
+  .profile-button, .btn-primary, .btn-secondary{
+    padding:12px 25px;
+    font-size:0.9rem;
+  }
 }
