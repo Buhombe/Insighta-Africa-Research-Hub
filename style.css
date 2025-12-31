@@ -1,109 +1,185 @@
-/* RESET */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+/* ===================== RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family:'Poppins',sans-serif;
-  background:#f7f7f7;
-  color:#222;
-  line-height:1.6;
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f7f7f7;
+  color: #222;
+  line-height: 1.6;
 }
 
-/* CONTAINER */
-.container{
-  max-width:1200px;
-  width:90%;
-  margin:auto;
+/* ===================== GLOBAL ===================== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* ===================== CARDS ===================== */
-.grid{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
+section {
+  padding: 40px 0;
 }
 
-/* DESKTOP CARD */
-.card{
-  background:#fff;
-  border-radius:15px;
-  padding:12px 15px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.06);
-  width:260px;              /* SAME WIDTH DESKTOP */
-  height:auto;              /* HEIGHT FIT CONTENT */
-  text-align:center;
-  display:flex;
-  flex-direction:column;
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff7f50;
 }
 
-/* Card content spacing */
-.card img{
-  width:90px;
-  height:90px;
-  border-radius:50%;
-  margin:5px auto;
-  object-fit:cover;
+/* ===================== NAV / HEADER ===================== */
+header {
+  background: #111;
+  color: #fff;
+  padding: 15px 0;
 }
 
-.card h3{
-  font-size:1rem;
-  margin:6px 0 4px;
-  color:#ff7f50;
+header h1 {
+  text-align: center;
+  font-size: 1.4rem;
 }
 
-.card p{
-  font-size:0.9rem;
-  margin:0;
-  color:#555;
+/* ===================== GRID SYSTEM ===================== */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* Button inside card */
-.profile-button{
-  margin-top:6px;
-  padding:8px 16px;
-  border-radius:30px;
-  background:linear-gradient(to right,#22c1c3,#fdbb2d);
-  color:#fff;
-  text-decoration:none;
-  font-size:0.85rem;
+/* ===================== CARD (GENERAL) ===================== */
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 12px 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+
+  width: 260px;       /* SAME WIDTH ALL CARDS (DESKTOP) */
+  height: auto;       /* HEIGHT FIT CONTENT */
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-/* ===================== MOBILE FIX (THIS IS THE KEY) ===================== */
-@media (max-width:768px){
+/* ===================== CARD CONTENT ===================== */
+.card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 5px auto;
+  object-fit: cover;
+}
 
-  .grid{
-    flex-direction:column;
-    align-items:center;
-    gap:12px;
+.card h3 {
+  font-size: 1rem;
+  margin: 6px 0 4px;
+  color: #ff7f50;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+/* ===================== BUTTON ===================== */
+.card a,
+.profile-button {
+  margin-top: 8px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: linear-gradient(to right, #22c1c3, #fdbb2d);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+/* ===================== PRICING SPECIAL ===================== */
+.pricing-card {
+  border: 2px solid #ff7f50;
+}
+
+/* ===================== FORMS ===================== */
+form {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background: #ff7f50;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.85rem;
+}
+
+/* ===================== MOBILE FIX (KEY PART) ===================== */
+@media (max-width: 768px) {
+
+  section {
+    padding: 25px 0;
   }
 
-  .card{
-    width:95%;          /* 🔥 THIS SOLVES YOUR ISSUE */
-    max-width:95%;
-    margin:0 auto;      /* CENTER CARD */
-    padding:10px 12px;  /* NO EMPTY SPACE */
+  .grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 
-  .card img{
-    width:80px;
-    height:80px;
+  .card {
+    width: 95%;        /* 🔥 EXACT FIX YOU ASKED */
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 10px 12px;
   }
 
-  .card h3{
-    font-size:0.95rem;
+  .card img {
+    width: 80px;
+    height: 80px;
   }
 
-  .card p{
-    font-size:0.85rem;
+  .card h3 {
+    font-size: 0.95rem;
   }
 
-  .profile-button{
-    width:100%;
-    margin-top:8px;
-    padding:8px 0;
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .card a,
+  .profile-button {
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
   }
 }
