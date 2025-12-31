@@ -139,7 +139,7 @@ body{
 
 .hero-content p{
   font-size:1.2rem;
-  margin-bottom:25px;
+  margin-bottom:20px;
 }
 
 .btn-primary{
@@ -262,7 +262,6 @@ h2{
 /* PRICING */
 #pricing{
   display:flex;
-  flex-wrap:wrap;
   justify-content:center;
   gap:20px;
   list-style:none;
@@ -316,77 +315,62 @@ footer{
 /* MOBILE RESPONSIVE */
 @media(max-width:768px){
 
-  /* Hero text smaller */
+  /* Hero text smaller + tighter spacing */
   .hero-content h1{
     font-size:2rem;
+    margin-bottom:15px;
   }
   .hero-content p{
     font-size:1rem;
+    margin-bottom:15px;
   }
 
-  /* About stacked */
+  /* About stacked + tighter gap */
   .about-grid{
     flex-direction:column;
-    gap:25px;
+    gap:20px;
   }
 
-  /* Cards stacked */
+  /* Cards stacked + tighter gap */
   .grid{
     flex-direction:column;
-    gap:20px;
+    gap:15px;
     align-items:center;
   }
 
-  /* Buttons full width */
+  /* Buttons full width + tighter spacing */
   .btn-primary, .btn-secondary, .profile-button{
     width:90%;
     text-align:center;
     margin:10px auto;
+    padding:12px 0;
   }
 
-  /* Contact stacked */
+  /* Contact stacked + tighter spacing */
   #contact{
     flex-direction:column;
-    padding:20px;
+    padding:20px 15px;
+    gap:15px;
   }
 
   .QRcode{
     width:120px;
     height:120px;
-    margin-bottom:20px;
+    margin-bottom:15px;
   }
 
   #pricing{
     flex-direction:column;
-    gap:20px;
+    gap:15px;
     padding:0 10px;
   }
 
-  /* Navbar links bigger and spaced */
+  /* Navbar links */
   .nav-links li a{
     font-size:1.2rem;
+    margin-bottom:5px;
   }
 
-  /* Hamburger bigger for touch */
+  /* Hamburger */
   .hamburger span{
-    width:30px;
-    height:4px;
-  }
-}
-
-/* Additional small device tweaks */
-@media(max-width:480px){
-  .hero-content h1{
-    font-size:1.5rem;
-  }
-  .hero-content p{
-    font-size:0.9rem;
-  }
-  .card{
-    padding:20px;
-  }
-  .profile-button, .btn-primary, .btn-secondary{
-    padding:12px 25px;
-    font-size:0.9rem;
-  }
-}
+    width:30px
