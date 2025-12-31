@@ -144,7 +144,7 @@ body{
 
 .btn-primary{
   display:inline-block;
-  padding:14px 40px;
+  padding:12px 30px;
   border-radius:50px;
   background: linear-gradient(135deg, #f5c77a, #ff9f43);
   color:#000;
@@ -160,14 +160,14 @@ body{
 
 /* SECTIONS */
 section{
-  padding:80px 0;
+  padding:60px 0;
 }
 
 /* HEADINGS */
 h2{
   text-align:center;
-  font-size:2.5rem;
-  margin-bottom:50px;
+  font-size:2.2rem;
+  margin-bottom:40px;
   color:#ff7f50;
 }
 
@@ -175,12 +175,12 @@ h2{
 .about-grid{
   display:flex;
   flex-wrap:wrap;
-  gap:40px;
+  gap:25px;
   align-items:center;
 }
 
 .about-text{
-  flex:1 1 350px;
+  flex:1 1 300px;
 }
 
 .about-text p{
@@ -190,12 +190,12 @@ h2{
 }
 
 .about-image{
-  flex:1 1 350px;
+  flex:1 1 300px;
 }
 
 .about-image img{
   width:100%;
-  border-radius:20px;
+  border-radius:15px;
   object-fit:cover;
 }
 
@@ -203,18 +203,19 @@ h2{
 .grid{
   display:flex;
   flex-wrap:wrap;
-  gap:20px; /* smaller gap */
+  gap:15px;
   justify-content:center;
 }
 
 .card{
   background:#fff;
   border-radius:15px;
-  padding:10px 20px; /* tighter padding */
+  padding:10px 15px;
   text-align:center;
   box-shadow:0 8px 20px rgba(0,0,0,0.05);
   flex:1 1 250px;
   max-width:280px;
+  height:auto;
   transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -245,8 +246,8 @@ h2{
 
 .profile-button{
   display:block;
-  margin:10px auto 0;
-  padding:10px 20px;
+  margin:8px auto 0;
+  padding:8px 20px;
   border-radius:40px;
   background: linear-gradient(to right, #22c1c3, #fdbb2d);
   color:#fff;
@@ -258,26 +259,22 @@ h2{
 
 .profile-button:hover{
   transform:translateY(-3px);
-  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
 /* PRICING */
 #pricing{
   display:flex;
   justify-content:center;
-  gap:15px;
+  gap:10px;
   list-style:none;
   padding:0;
 }
 
-#pricing li{
+#pricing .card{
   flex:1 1 250px;
-  max-width:280px;
-  text-align:center;
-  background:#fff;
-  border-radius:15px;
-  padding:10px 15px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+  max-width:260px;
+  margin:0 auto;
 }
 
 /* CONTACT */
@@ -287,21 +284,21 @@ h2{
   flex-wrap:wrap;
   align-items:center;
   justify-content:space-around;
-  padding:40px 20px;
-  gap:20px;
+  padding:30px 15px;
+  gap:15px;
   text-align:center;
 }
 
 .QRcode{
-  width:150px;
-  height:150px;
-  border-radius:20px;
+  width:120px;
+  height:120px;
+  border-radius:15px;
 }
 
 /* BUTTONS */
 .btn-secondary{
   display:inline-block;
-  padding:14px 40px;
+  padding:12px 30px;
   border-radius:50px;
   background: linear-gradient(135deg, #f5c77a, #ff9f43);
   color:#000;
@@ -318,7 +315,7 @@ h2{
 /* FOOTER */
 footer{
   text-align:center;
-  padding:25px 0;
+  padding:20px 0;
   font-size:0.9rem;
   color:#666;
   border-top:1px solid #eee;
@@ -327,91 +324,63 @@ footer{
 /* MOBILE RESPONSIVE */
 @media(max-width:768px){
 
-  /* Hero text smaller + tighter spacing */
   .hero-content h1{
     font-size:2rem;
-    margin-bottom:15px;
+    margin-bottom:12px;
   }
   .hero-content p{
     font-size:1rem;
-    margin-bottom:15px;
+    margin-bottom:12px;
   }
 
-  /* About stacked + tighter gap */
   .about-grid{
     flex-direction:column;
-    gap:20px;
-  }
-
-  /* Cards stacked + tighter gap */
-  .grid{
-    flex-direction:column;
-    gap:10px; /* very small gap */
-    align-items:center;
-  }
-
-  .card{
-    padding:5px 15px; /* top/bottom small */
-    max-width:95%;
-  }
-
-  .card h3{
-    font-size:0.95rem;
-    margin-bottom:4px;
-  }
-
-  .card p{
-    font-size:0.85rem;
-    margin-bottom:3px;
-  }
-
-  /* Pricing centered */
-  #pricing{
-    flex-direction:column;
-    gap:10px;
-    padding:0;
-    align-items:center;
-  }
-
-  #pricing li{
-    max-width:95%;
-  }
-
-  /* Buttons full width + tighter spacing */
-  .btn-primary, .btn-secondary, .profile-button{
-    width:90%;
-    text-align:center;
-    margin:10px auto;
-    padding:12px 0;
-  }
-
-  /* Contact stacked + tighter spacing */
-  #contact{
-    flex-direction:column;
-    padding:20px 15px;
     gap:15px;
   }
 
-  .QRcode{
-    width:120px;
-    height:120px;
-    margin-bottom:15px;
+  .grid{
+    flex-direction:column;
+    gap:10px;
+    align-items:center;
   }
 
-  /* Navbar links */
+  .btn-primary, .btn-secondary, .profile-button{
+    width:90%;
+    text-align:center;
+    margin:8px auto;
+    padding:10px 0;
+  }
+
+  #contact{
+    flex-direction:column;
+    padding:15px;
+    gap:10px;
+  }
+
+  .QRcode{
+    width:100px;
+    height:100px;
+    margin-bottom:10px;
+  }
+
+  #pricing{
+    flex-direction:column;
+    gap:10px;
+    padding:0 5px;
+  }
+
   .nav-links li a{
-    font-size:1.2rem;
+    font-size:1.1rem;
     margin-bottom:5px;
   }
 
-  /* Hamburger */
   .hamburger span{
-    width:30px;
-    height:4px;
+    width:28px;
+    height:3px;
   }
 }
 
-/* Small devices tweaks */
+/* SMALL DEVICES */
 @media(max-width:480px){
   .hero-content h1{
     font-size:1.5rem;
@@ -419,13 +388,11 @@ footer{
   .hero-content p{
     font-size:0.9rem;
   }
-
+  .card{
+    padding:8px 10px;
+  }
   .profile-button, .btn-primary, .btn-secondary{
     padding:10px 20px;
     font-size:0.85rem;
-  }
-
-  .card{
-    padding:5px 10px;
   }
 }
