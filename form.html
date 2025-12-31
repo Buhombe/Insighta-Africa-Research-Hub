@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Form | Insighta Africa Research Consultancy</title>
+  <link rel="stylesheet" href="form.css">
+  <link rel="icon" href="images/favicon.jpg">
+  <style>
+    /* Success message styling */
+    #success-message {
+      display: none;
+      background: linear-gradient(135deg, #4caf50, #81c784);
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      animation: fadeIn 0.8s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="form-hero">
+    <div class="form-hero-overlay"></div>
+    <div class="form-hero-content container">
+      <h1>Submit Your Research Application</h1>
+      <p>Fill out the form below to request professional research services. Our team will contact you shortly.</p>
+    </div>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section class="application-section container">
+    <div class="application-grid">
+
+      <!-- FORM -->
+      <form
+        id="application-form"
+        action="https://formspree.io/f/mlgdrajr"
+        method="POST"
+      >
+
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" name="entry.293151641" required placeholder="Edgar Fidel Mazele">
+        </div>
+
+        <div class="form-group">
+          <label>Program of Study</label>
+          <input type="text" name="entry.2033299175" required placeholder="DNS / BScN / MD / CND">
+        </div>
+
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" name="entry.1163563275" required placeholder="+255 761 537 744">
+        </div>
+
+        <div class="form-group">
+          <label>Date of Submission</label>
+          <input type="date" name="entry.211531800" required>
+        </div>
+
+        <div class="form-group">
+          <label>Service Applied For</label>
+          <select name="entry.850814170" required>
+            <option value="">Select service</option>
+            <option value="Proposal Writing">Proposal Writing</option>
+            <option value="Data Collection">Data Collection</option>
+            <option value="Data Analysis (SPSS, Stata, Excel)">Data Analysis</option>
+            <option value="Report Writing">Report Writing</option>
+            <option value="Questionnaire Making">Questionnaire Making</option>
+            <option value="Research Presentation">Research Presentation</option>
+            <option value="Plagiarism Checking">Plagiarism Checking</option>
+            <option value="Full Research">Full Research</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Research Title</label>
+          <textarea name="entry.133398273" rows="5" required placeholder="Write your research title here..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="entry.597737213" value="I agree" required>
+            I agree to the terms and conditions
+          </label>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="Submit Application" id="submit">
+        </div>
+
+        <!-- SUCCESS MESSAGE -->
+        <div id="success-message">
+  ✅ Submission Successful <br><br>
+  Your application has been successfully submitted to  
+  <strong>Insighta Africa Research Consultancy</strong>.  
+  Our team will review your request and contact you in due course.
+</div>
+      </form>
+
+      <!-- IMAGE -->
+      <div class="form-image">
+        <img src="images/Application.jpg" alt="Research application illustration">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>Contact Us</h3>
+        <p>📞 +255 761 537 744 <br>📞 +255 764 991 845 <br>📧 mbuhombe@gmail.com</p>
+      </div>
+    </div>
+    <div id="copyrights">
+      © 2025 Insighta Africa Research Consultancy. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- HIDDEN IFRAME -->
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  <!-- JS -->
+  <script>
+const form = document.getElementById("application-form");
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    document.getElementById("success-message").style.display = "block";
+    form.reset();
+  } else {
+    alert("❌ Submission failed. Please try again.");
+  }
+});
+</script>
+
+</body>
+</html>
