@@ -9,7 +9,7 @@ body{
   font-family:'Poppins',sans-serif;
   background:url('images/background.jpg') no-repeat center center/cover;
   color:#222;
-  line-height:2px;
+  line-height:2;
   text-align:justify;
 }
 
