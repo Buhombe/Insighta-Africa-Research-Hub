@@ -9,7 +9,7 @@ body{
   font-family:'Poppins',sans-serif;
   background:url('images/background.jpg') no-repeat center center/cover;
   color:#222;
-  line-height:1.6;
+  line-height:2px;
   text-align:justify;
 }
 
@@ -279,7 +279,8 @@ footer{
   }
 
   .hero-content p{
-    font-size:1rem;
+    font-size:1.2rem;
+    text-align:justify;
   }
 
   /* CARDS – PERFECT MOBILE */
