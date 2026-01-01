@@ -306,3 +306,39 @@ footer{
     font-size:2rem;
   }
 }
+
+/* ====== GLOBAL TEXT SAFETY FIX (NO LAYOUT CHANGE) ====== */
+body{
+  overflow-x:hidden;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+}
+
+/* ====== FIX CONTENT HIDING UNDER FIXED NAVBAR ====== */
+body{
+  padding-top:80px; /* height ya navbar */
+}
+
+/* ====== PREVENT TEXT OVERFLOW ON SMALL SCREENS ====== */
+p, h1, h2, h3, a, li{
+  max-width:100%;
+  word-break:break-word;
+}
+
+/* ====== HERO TEXT SAFETY ====== */
+.hero-content{
+  max-width:900px;
+  margin:auto;
+}
+
+/* ====== MOBILE TEXT SAFETY ONLY ====== */
+@media(max-width:768px){
+  body{
+    line-height:1.7; /* was too large */
+  }
+
+  p{
+    font-size:0.95rem;
+  }
+}
+
