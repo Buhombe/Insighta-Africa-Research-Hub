@@ -226,6 +226,7 @@ h2{
   background:#fef6f3;
   text-align:center;
   padding:50px 20px;
+  display: flex;
 }
 
 .QRcode{
