@@ -154,6 +154,7 @@ h2{
 .about-text p{
   font-size:1.05rem;
   color:#444;
+  text-align:justify;
 }
 
 .about-image img{
@@ -216,6 +217,7 @@ h2{
   max-width:800px;
   margin:auto;
   padding:0;
+  text-align:justify;
 }
 
 /* ================= CONTACT ================= */
