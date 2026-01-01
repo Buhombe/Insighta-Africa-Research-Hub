@@ -114,6 +114,7 @@ body {
   background: #0f172a;
   color: #e5e7eb;
   padding-top: 60px;
+  display: flex;
 }
 
 .footer-content {
