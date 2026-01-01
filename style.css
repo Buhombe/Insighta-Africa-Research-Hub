@@ -10,6 +10,7 @@ body{
   background:url('images/background.jpg') no-repeat center center/cover;
   color:#222;
   line-height:1.6;
+  text-align:justify;
 }
 
 /* ================= NAVBAR ================= */
