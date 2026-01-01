@@ -257,6 +257,15 @@ h2{
   color:#d1d5db;
 }
 
+#copyrights{
+  margin-top:50px;
+  padding:20px 0;
+  text-align:center;
+  font-size:0.85rem;
+  background:#020617;
+  color:#9ca3af;
+}
+
 /* ================= MOBILE FIX (IMPORTANT) ================= */
 @media(max-width:768px){
 
