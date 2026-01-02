@@ -54,9 +54,10 @@
       </div>
     </div>
 
-    <!-- Our Growth & Impact Section -->
+    <!-- ================== GROWTH & PARTNERSHIP SECTION ================== -->
 <section class="stats-section">
   <div class="container">
+    <!-- Our Growth & Impact -->
     <h2>Our Growth & Impact</h2>
     <p>Insighta Africa has partnered with organizations and individuals to deliver professional research and data solutions.</p>
     
@@ -72,8 +73,223 @@
         <p>Clients Served</p>
       </div>
     </div>
+
+    <!-- Partner With Us -->
+    <div class="partner-section">
+      <div class="partner-content">
+        <h2>Partner With Insighta Africa</h2>
+        <p>Join us in growing professional research, innovative projects, and community-driven ventures across Tanzania. Collaborate with us to make a meaningful impact.</p>
+        <a href="contact.html" class="partner-btn">Connect With Us</a>
+      </div>
+
+      <div class="partner-stats">
+        <div class="stat-card">
+          <h3>97+</h3>
+          <p>Clients Served (2024)</p>
+        </div>
+        <div class="stat-card">
+          <h3>132+</h3>
+          <p>Clients Served (2025)</p>
+        </div>
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Projects Delivered With Integrity</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- ================== CSS ================== -->
+<style>
+/* Container */
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* -------- Stats Section -------- */
+.stats-section {
+  padding: 80px 0;
+  text-align: center;
+  background: #f9fafb;
+}
+
+.stats-section h2 {
+  color: #ff7f50;
+  margin-bottom: 15px;
+  font-size: clamp(28px,4vw,40px);
+}
+
+.stats-section p {
+  color: #374151;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 40px;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.counter {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  display: inline-block;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.stat-card.show .counter {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.stat-card p:last-child {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+/* -------- Partner Section -------- */
+.partner-section {
+  margin-top: 80px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #ffffff;
+  padding: 60px 0;
+  border-radius: 20px;
+}
+
+.partner-content h2 {
+  font-size: clamp(32px,4vw,48px);
+  color: #ff7f50;
+  margin-bottom: 20px;
+}
+
+.partner-content p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+.partner-btn {
+  display: inline-block;
+  padding: 15px 35px;
+  background: #ff7f50;
+  color: #ffffff;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.partner-btn:hover {
+  background: #ff9b7c;
+  transform: translateY(-3px);
+}
+
+/* Partner Stats Cards */
+.partner-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.partner-stats .stat-card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.partner-stats .stat-card h3 {
+  font-size: 2rem;
+  color: #ffb347;
+}
+
+.partner-stats .stat-card p {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .stats-section, .partner-section { padding: 60px 0; }
+  .stats-grid, .partner-stats { gap: 20px; }
+  .counter, .partner-stats .stat-card h3 { font-size: 1.8rem; }
+  .partner-btn { padding: 12px 28px; font-size: 0.95rem; }
+}
+</style>
+
+<!-- ================== JS ================== -->
+<script>
+// -------- Counters Animation for Stats & Partner Section --------
+document.addEventListener("DOMContentLoaded", function() {
+  const counters = document.querySelectorAll('.counter');
+  const partnerCounters = document.querySelectorAll('.partner-stats .stat-card h3');
+
+  function animateCounters(elements) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.getAttribute('data-target') || counter.innerText.replace(/\D/g,''), 10);
+          let count = 0;
+          const increment = Math.ceil(target / 100);
+
+          const updateCount = () => {
+            count += increment;
+            if(count < target){
+              counter.innerText = count + (counter.hasAttribute('data-target') ? '' : '+');
+              requestAnimationFrame(updateCount);
+            } else {
+              counter.innerText = target + (counter.hasAttribute('data-target') ? '' : '+');
+            }
+          }
+
+          counter.parentElement.classList.add('show');
+          updateCount();
+          obs.unobserve(counter);
+        }
+      });
+    }, {threshold: 0.5});
+
+    elements.forEach(el => observer.observe(el));
+  }
+
+  animateCounters(counters);
+  animateCounters(partnerCounters);
+});
+</script>
+
   <!-- SERVICES -->
   <section id="services">
     <div class="container">
